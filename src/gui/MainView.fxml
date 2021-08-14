@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="820.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.MainViewController">
+   <content>
+      <VBox alignment="TOP_CENTER" fillWidth="false" prefHeight="600.0" prefWidth="820.0" spacing="10.0">
+         <children>
+            <MenuBar prefHeight="25.0" prefWidth="820.0">
+              <menus>
+                <Menu fx:id="menuItemGerente" disable="true" mnemonicParsing="false" text="Gerente">
+                  <items>
+                        <MenuItem fx:id="menuItemGerenciarEmpresa" mnemonicParsing="false" onAction="#onMenuItemGerenciarEmpresaAction" text="Gerenciar Empresa" />
+                    <MenuItem fx:id="menuItemGerenciarFuncionario" mnemonicParsing="false" onAction="#onMenuItemGerenciarFuncionarioAction" text="Gerenciar Funcionário" />
+                  </items>
+                </Menu>
+                <Menu fx:id="menuItemFuncionario" disable="true" mnemonicParsing="false" text="Funcionário">
+                  <items>
+                    <MenuItem fx:id="menuItemAreaFuncionario" mnemonicParsing="false" onAction="#onMenuItemAreaFuncionarioAction" text="Minha Área" />
+                  </items>
+                </Menu>
+                <Menu fx:id="menuItemAjuda" disable="true" mnemonicParsing="false" text="Ajuda">
+                  <items>
+                    <MenuItem fx:id="menuItemSobre" mnemonicParsing="false" onAction="#onMenuItemSobreAction" text="Sobre" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <Label fx:id="labelLogin" alignment="CENTER" prefHeight="91.0" prefWidth="820.0" text="Login" textFill="#4c57ef">
+               <font>
+                  <Font name="Segoe UI Bold" size="32.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCpf" prefHeight="25.0" prefWidth="203.0" promptText="CPF" />
+            <PasswordField fx:id="passwordFieldSenha" prefHeight="25.0" prefWidth="203.0" promptText="Senha" />
+            <Label fx:id="labelErroLogin" alignment="CENTER" prefHeight="18.0" prefWidth="204.0" textAlignment="CENTER" textFill="RED" />
+            <Button fx:id="btnLogin" mnemonicParsing="false" onAction="#onBtnLoginAction" prefHeight="25.0" prefWidth="145.0" text="Login" textFill="#4c57ef">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnCancelar" mnemonicParsing="false" onAction="#onBtnCancelarAction" prefHeight="25.0" prefWidth="145.0" text="Cancelar" textFill="#4c57ef">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </content>
+</ScrollPane>
